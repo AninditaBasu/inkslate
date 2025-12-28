@@ -46,11 +46,17 @@ Dinu's eyes were gentle. "I did warn you. I first took away your eyesight. I the
 Minutes passed. The sun had set. A retainer came in to place a lamp on the table, and found Arun's motionless body.
 ```
 
-We are warned. We're given ample warnings, well ahead of time, to indicate that our time on this plane is almost over. We choose to ignore those signs. I was reminded of this story, very powerfully, last week at a hospital I'd gone to with my mother for a follow-up check after her surgery three weeks ago. While we were waiting, a young doctor came around and asked whether I'd like to volunteer to be part of a study they were doing to gather metrics that could help detect early signs of neurological disorder. I agreed. The tests took almost 45 minutes, and consisted of mental arithmetic, verbal reasoning, short term memory recall, and several tests around hand motor functions. One of these tests was about having to write 10-12 sentences about my last vacation.
+We are warned. We're given ample warnings, well ahead of time, to indicate that our time on this plane is almost over. 
+
+We choose to ignore those signs. 
+
+I was reminded of this story, very powerfully, last week at a hospital I'd gone to with my mother for a follow-up check after her surgery three weeks ago. While we were waiting, a young doctor came around and asked whether I'd like to volunteer to be part of a study they were doing to gather metrics that could help detect early signs of neurological disorder. I agreed. 
+
+The tests took almost 45 minutes, and consisted of mental arithmetic, verbal reasoning, short term memory recall, vocabulary, current affairs, and several tests around hand motor functions. One of these tests was about having to write 10 or 12 sentences about my last vacation.
 
 That test became the trigger for InkSlate. Handwriting is closely related to brain-muscle coordination and precision. What if there was a fun app that could detect the signs?
 
 <div class="figure">
-  <img src="{{ '/images/logo_inkslate.png' | relative_url }}" class="center-image" style="width:50%;">
+  <img src="{{ '/images/inkslate.png' | relative_url }}" class="center-image" style="width:50%;">
   <div>&nbsp;</div>
 </div>
