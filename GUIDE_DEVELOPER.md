@@ -32,7 +32,7 @@ capabilities:
 limitations:
   - graphology is not scientifically validated
   - outputs are for entertainment and reflection only
-last_updated: "2026-01-01"
+last_updated: "2025-12-28"
 ---
 
 # InkSlate Developer Guide
@@ -67,7 +67,7 @@ InkSlate is a Python script that uses the Google Gemini API to analyse handwriti
 - Automatically stores timestamped JSON analysis files
 
 <div class="figure">
-  <img src="{{ '/images/inkslate_developer.png' | relative_url }}" class="center-image" style="width:60%;">
+  <img src="{{ '/images/inkslate_developer.png' | relative_url }}" class="center-image" style="width:50%;">
   <div>&nbsp;</div>
 </div>
 

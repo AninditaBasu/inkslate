@@ -292,47 +292,112 @@ def print_personality_results(results: Dict):
     print("=" * 70)
 
 
-def create_comparison_report(file1: str, file2: str):
-    """Compare two analysis reports (for tracking changes over time)."""
+def create_comparison_report(file1: str, file2: str, compare_all: bool = False):
+    """Compare two personality analyses (useful for tracking changes over time).
+    
+    Args:
+        file1: Path to first analysis JSON file
+        file2: Path to second analysis JSON file
+        compare_all: If True, compare all traits. If False, compare key traits only.
+    """
     try:
-        with open(file1, "r") as f:
+        with open(file1, 'r') as f:
             analysis1 = json.load(f)
-        with open(file2, "r") as f:
+        with open(file2, 'r') as f:
             analysis2 = json.load(f)
-
+        
         print("\n" + "=" * 70)
         print("PERSONALITY COMPARISON REPORT")
         print("=" * 70)
         print(f"Analysis 1: {analysis1.get('timestamp', 'N/A')}")
         print(f"Analysis 2: {analysis2.get('timestamp', 'N/A')}")
         print("-" * 70)
-
-        traits_to_compare = [
-            "emotional_stability", "extraversion_introversion", "confidence_level",
-            "stress_level", "optimism_pessimism", "energy_level"
-        ]
-
-        print("\nKEY CHANGES:\n")
+        
+        if compare_all:
+            # Compare all personality traits
+            traits_to_compare = [
+                "emotional_stability", "extraversion_introversion", "confidence_level",
+                "attention_to_detail", "openness_to_experience", "conscientiousness",
+                "agreeableness", "emotional_expressiveness", "stress_level",
+                "communication_style", "thinking_style", "energy_level",
+                "social_orientation", "decisiveness", "optimism_pessimism",
+                "self_discipline", "creativity", "adaptability",
+                "leadership_qualities", "honesty_authenticity"
+            ]
+            print("\nCOMPLETE TRAIT COMPARISON:\n")
+        else:
+            # Compare key traits most relevant for longitudinal tracking
+            traits_to_compare = [
+                "emotional_stability", "extraversion_introversion", "confidence_level",
+                "stress_level", "optimism_pessimism", "energy_level"
+            ]
+            print("\nKEY TRAIT CHANGES (use compare_all=True for full comparison):\n")
+        
         changes_detected = False
-
+        unchanged_count = 0
+        
         for trait in traits_to_compare:
-            val1 = analysis1.get(trait, 'N/A')
-            val2 = analysis2.get(trait, 'N/A')
-
+            val1 = analysis1.get(trait, "N/A")
+            val2 = analysis2.get(trait, "N/A")
+            
             if val1 != val2:
                 changes_detected = True
                 label = trait.replace("_", " ").title()
-                print(f"   {label}:")
-                print(f"   {val1.replace('_', ' ').title()} --> {val2.replace('_', ' ').title()}")
+                print(f"  {label}:")
+                print(f"   {val1.replace('_', ' ').title()} → {val2.replace('_', ' ').title()}")
                 print()
-
+            else:
+                unchanged_count += 1
+        
         if not changes_detected:
-            print("No significant changes detected.")
-
-        print("=" * 70)
-
+            print("  No changes detected in tracked personality traits.")
+        else:
+            print(f"\nSummary: {len(traits_to_compare) - unchanged_count} traits changed, {unchanged_count} unchanged")
+        
+        # Compare strengths and challenges
+        print("\n" + "-" * 70)
+        print("STRENGTHS COMPARISON:")
+        strengths1 = set(analysis1.get('strengths', []))
+        strengths2 = set(analysis2.get('strengths', []))
+        
+        new_strengths = strengths2 - strengths1
+        lost_strengths = strengths1 - strengths2
+        
+        if new_strengths:
+            print("\n  New strengths identified:")
+            for s in new_strengths:
+                print(f"   + {s}")
+        
+        if lost_strengths:
+            print("\n   Previously identified strengths not spotted today:")
+            for s in lost_strengths:
+                print(f"   - {s}")
+        
+        if not new_strengths and not lost_strengths:
+            print("  Strengths profile remains consistent")
+        
+        print("\n" + "-" * 70)
+        print("STRESS INDICATORS COMPARISON:")
+        stress1 = analysis1.get('stress_indicators', 'None detected')
+        stress2 = analysis2.get('stress_indicators', 'None detected')
+        
+        print(f"\nPrevious: {stress1}")
+        print(f"Current:  {stress2}")
+        
+        if stress1 != stress2:
+            if "none" in stress2.lower():
+                print("\n  Stress indicators have decreased")
+            elif "none" in stress1.lower():
+                print("\n  New stress indicators detected")
+            else:
+                print("\n  Stress patterns have changed")
+        
+        print("\n" + "=" * 70)
+        
+    except FileNotFoundError as e:
+        print(f"[ERROR] Error: Could not find file: {e}")
     except Exception as e:
-        print(f'[ERROR] Error comparing the reports: {e}')
+        print(f"[ERROR] Error comparing the analysis reports: {e}")
 
 
 def discover_analysis_capabilities(model):
@@ -467,4 +532,5 @@ if __name__ == '__main__':
 
     # Optional: Compare two analysis reports
     # create_comparison_report("analysis1_personality.json", "analysis2_personality.json")
+    # create_comparison_report("analysis1_personality.json", "analysis2_personality.json", compare_all=True)
 

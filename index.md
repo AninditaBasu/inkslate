@@ -47,7 +47,7 @@ ethical_constraints:
   - no clinical claims
   - no health diagnosis
   - user data remains local
-last_updated: "2026-01-01"
+last_updated: "2025-12-28"
 ---
 
 # InkSlate
@@ -55,12 +55,13 @@ last_updated: "2026-01-01"
 Your handwriting tells a story. InkSlate listens to it. 
 
 <div class="figure">
-  <img src="{{ '/images/diary.png' | relative_url }}" class="center-image" style="width:60%;">
+  <img src="{{ '/images/diary.png' | relative_url }}" class="center-image" style="width:40%;">
   <div>&nbsp;</div>
 </div>
 
 InkSlate is a Python-based handwriting analysis tool that uses Google Gemini multimodal AI to generate graphology-style personality insights from handwriting images.
 
-- 📖 [User Guide]({{ '/GUIDE_USER.html' | relative_url }})
-- ⚙️ [Developer guide]({{ '/GUIDE_DEVELOPER.html' | relative_url }})
+- 📖 [User Guide]({{ '/guide_user.html' | relative_url }})
+- ⚙️ [Developer guide]({{ '/guide_developer.html' | relative_url }})
 - 💻 [Source code](https://github.com/AninditaBasu/inkslate/blob/9e645b68eef6a657b6fda1adb767c14a0ee72664/inkslate.py)
+- 🪶 [Backstory]({{ '/backstory.html' | relative_url }})
