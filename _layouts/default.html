@@ -16,13 +16,14 @@
   <div class="layout">
     <aside class="sidebar">
       <div class="logo">
-        <img src="{{ '/images/logo.png' | relative_url }}" alt="InkSlate logo">
+        <a href="{{ '/' | relative_url }}"><img src="{{ '/images/logo.png' | relative_url }}" alt="InkSlate logo"></a>
       </div>
       <div class="site-name">InkSlate</div>
       <nav>
         <a href="{{ '/' | relative_url }}">🏡 Home</a>
-        <a href="{{ '/GUIDE_USER.html' | relative_url }}">📖 User guide</a>
-        <a href="{{ '/GUIDE_DEVELOPER.html' | relative_url }}">⚙️ Developer guide</a>
+        <a href="{{ '/guide_user.html' | relative_url }}">📖 User guide</a>
+        <a href="{{ '/guide_developer.html' | relative_url }}">⚙️ Developer guide</a>
+		<a href="{{ '/backstory.html' | relative_url }}">🪶 Backstory</a>
       </nav>
     </aside>
 
