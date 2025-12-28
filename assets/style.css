@@ -229,3 +229,27 @@ footer {
   font-size: 0.85rem;
   color: var(--ink-soft);
 }
+
+/* -------------------------
+   Responsive
+--------------------------*/
+
+@media (max-width: 800px) {
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+}
