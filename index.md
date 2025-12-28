@@ -55,7 +55,7 @@ last_updated: "2026-01-01"
 Your handwriting tells a story. InkSlate listens to it. 
 
 <div class="figure">
-  <img src="{{ '/images/diary.png' | relative_url }}" class="center-image">
+  <img src="{{ '/images/diary.png' | relative_url }}" class="center-image" style="width:80%;">
   <div>&nbsp;</div>
 </div>
 

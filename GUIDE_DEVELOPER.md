@@ -67,7 +67,7 @@ InkSlate is a Python script that uses the Google Gemini API to analyse handwriti
 - Automatically stores timestamped JSON analysis files
 
 <div class="figure">
-  <img src="{{ '/images/inkslate_developer.png' | relative_url }}" class="center-image">
+  <img src="{{ '/images/inkslate_developer.png' | relative_url }}" class="center-image" style="width:70%;">
   <div>&nbsp;</div>
 </div>
 
