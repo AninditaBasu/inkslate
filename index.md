@@ -61,8 +61,6 @@ Your handwriting tells a story. InkSlate listens to it.
 
 InkSlate is a Python-based handwriting analysis tool that uses Google Gemini multimodal AI to generate graphology-style personality insights from handwriting images.
 
-
 - 📖 [User Guide]({{ '/GUIDE_USER.html' | relative_url }})
-- 🛠 [Developer guide]({{ '/GUIDE_DEVELOPER.html' | relative_url }})
-- 📄 [GitHub README](https://github.com/AninditaBasu/inkslate)
-- 🧠 [Source code](inkslate.py)
+- ⚙️ [Developer guide]({{ '/GUIDE_DEVELOPER.html' | relative_url }})
+- 💻 [Source code](https://github.com/AninditaBasu/inkslate/blob/9e645b68eef6a657b6fda1adb767c14a0ee72664/inkslate.py)

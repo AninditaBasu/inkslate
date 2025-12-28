@@ -33,6 +33,8 @@ last_updated: "2026-01-01"
 
 # InkSlate User Guide
 
+---
+
 InkSlate is a personality analyser.
 
 It looks at an image of your handwriting and creates a personality profile for fun. It is meant for self-reflection and curiosity, **not** diagnosis.
@@ -48,15 +50,20 @@ It looks at an image of your handwriting and creates a personality profile for f
 
 - A computer with Python 3.9 or later.
 - A clear photo of your handwriting.
-- A free API key from Google. Get your free key from [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey).
+- A Gemini API key from Google. Get your free key from [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey).
 
 ## Steps
 
-1. Create a handwriting sample. Write 3 or 4 natural sentences on paper. Write normally, like you usually do. Then, take a clear photo of the writing, and save it on your computer.
-1. Make the `inkslate.py` script ready to use.
+1. Create a handwriting sample. Write 3 or 4 sentences on paper. Then, take a clear photo of the writing, and save it on your computer.
+1. Make the `inkslate.py` script ready for use.
 	1. Assuming that Python is installed on your computer, open the command prompt and type `pip install google-generativeai pillow`. Wait for the Python libraries to be downloaded and installed.
-	1. Download the `inkslate.py` file and open it in any text editor. Find this line near the top: `GEMINI_API_KEY = "<your_Google_AI_API_key_goes_here>"`. Paste your API key between the quotes. Save the file.
-1. Run InkSlate by typing the following command: `python inkslate.py`. When prompted, enter the full path to the image file you created in a previous step. It might take a while for the analysis to be done, after which the result is displayed on the terminal. A time-stamped result file (in `.json` format) is saved in the same folder as the image file.
+	1. Download the `inkslate.py` file from the [GitHub repository](https://github.com/AninditaBasu/inkslate/blob/9e645b68eef6a657b6fda1adb767c14a0ee72664/inkslate.py). Openthe file in any text editor and find this line near the top: `GEMINI_API_KEY = "<your_Google_AI_API_key_goes_here>"`. Paste your API key between the quotes. Save the file.
+1. Run InkSlate by returning to the command prompt and typing the following command: `python inkslate.py`. When prompted, enter the full path to the image file you created in a previous step. It might take a while for the analysis to be done, after which the result is displayed on the terminal. A time-stamped result file (in `.json` format) is saved in the same folder as the image file.
+
+<div class="figure">
+  <img src="{{ '/images/inkslate_user.png' | relative_url }}" class="center-image">
+  <div>&nbsp;</div>
+</div>
 
 The result can contain phrases such as these:
 
@@ -66,7 +73,7 @@ The result can contain phrases such as these:
 - Strengths
 - Weaknesses
 
-Treat these as conversation starters with yourself, not hard facts. Remember, InkSlate is a fun tool, not a medical doctor.
+Treat these as conversation starters with yourself, not hard facts. After all, InkSlate is a fun tool, not a medical doctor.
 
 Have fun!
 
@@ -74,14 +81,15 @@ Have fun!
 
 You can repeat this process weekly, monthly, or as frequently as you want to, by supplying a handwriting sample of that day. You're limited only by the free limits of your API key. Every time, a time-stamped file is created with the results. 
 
-Changes in handwriting can sometimes reflect changes in fine motor control, fatigue, or stress levels. When you're writing by hand, several pieces of _you_ interact with each other: your brain, nervous system, muscles, vision, and posture. Changes in any of these systems can alter the slant, pressure, spacing, or consistency in your writing. Besides, your writing is also affected by medication or injury. A single analysis means very little, but consistent changes across many samples over weeks or months could be worth paying attention to. If you notice strong or persistent handwriting changes, together with the following real-world symptoms, it might make sense to seek professional medical help:
+Changes in handwriting can sometimes reflect changes in fine motor control, fatigue, or stress levels. When you're writing by hand, several pieces of your body interact with each other: your brain, nervous system, muscles, vision, and posture. Changes in any of these systems can alter the slant, pressure, spacing, or consistency in your writing. Besides, your writing is also affected by medication or injury. A single analysis means very little, but consistent changes across many samples over weeks or months could be worth paying attention to. If you notice strong or persistent handwriting changes, together with the following real-world symptoms, it might make sense to seek professional medical help:
 
 - Frequent hand tremors
 - Loss of coordination
 - Numbness or weakness
 - Unexplained fatigue
 
-You are the expert on your own body. InkSlate can only highlight some patterns, and that too with artificial Gemini intelligence (and we all know what kind of a trickster Gemini is in real mythology). It is you who knows best when something feels different enough to investigate further.
+> **Remember:**
+>You are the expert on your own body. InkSlate can only highlight some patterns, and that too with artificial Gemini intelligence (and we all know what kind of a trickster Gemini is in real mythology). It is you who knows best when something feels different enough to investigate further.
 
 To compare two pieces of writing programmatically:
 

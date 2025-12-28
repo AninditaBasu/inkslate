@@ -293,7 +293,7 @@ def print_personality_results(results: Dict):
 
 
 def create_comparison_report(file1: str, file2: str):
-    """Compare two personality analyses (for tracking changes over time)."""
+    """Compare two analysis reports (for tracking changes over time)."""
     try:
         with open(file1, "r") as f:
             analysis1 = json.load(f)
@@ -332,7 +332,7 @@ def create_comparison_report(file1: str, file2: str):
         print("=" * 70)
 
     except Exception as e:
-        print(f'[ERROR] Error comparing analyses: {e}')
+        print(f'[ERROR] Error comparing the reports: {e}')
 
 
 def discover_analysis_capabilities(model):
@@ -465,6 +465,6 @@ if __name__ == '__main__':
     # batch_image_paths = ["sample1.jpg", "sample2.jpg", "sample3.jpg"]
     # batch_analyse(batch_image_paths, model)
 
-    # Optional: Compare two analyses
+    # Optional: Compare two analysis reports
     # create_comparison_report("analysis1_personality.json", "analysis2_personality.json")
 

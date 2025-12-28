@@ -37,12 +37,12 @@ last_updated: "2026-01-01"
 
 # InkSlate Developer Guide
 
+---
+
 InkSlate is a Python script that uses the Google Gemini API to analyse handwriting images and generate a personality profile that's based on graphology-inspired heuristics.
 
-> **Disclaimer**
+> **Disclaimer:**
 > Graphology is **not scientifically validated**. InkSlate is for entertainment only.
-
----
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -65,6 +65,11 @@ InkSlate is a Python script that uses the Google Gemini API to analyse handwriti
 - Detects changes over time
 - Has a capability discovery mode (asks Gemini what traits it can assess)
 - Automatically stores timestamped JSON analysis files
+
+<div class="figure">
+  <img src="{{ '/images/inkslate_developer.png' | relative_url }}" class="center-image">
+  <div>&nbsp;</div>
+</div>
 
 ## Requirements
 
@@ -89,8 +94,8 @@ Some of these functions aren't called; they're there for extended use cases.
 ### Essential functions
 
 - `setup_gemini(api_key, model_name="gemini-2.5-flash")`: Initialises the Gemini client and returns a GenerativeModel instance.
-- `create_graphology_prompt() -> str`: Builds and returns the full structured prompt used to instruct Gemini how to analyse handwriting. This function is the brain of InkSlate. It encodes the graphology rules to follow, the output constraints, and the required JSON schema. This is the function to modify if you need to add or delete any personality fields, change the wording that's printed in the report, tighten the output constraints, or experiment with different graphology heuristics. This function makes Gemini:
-	- Evaluate specific handwriting parameters (slant, pressure, spacing, margins, baseline, letter forms, speed)
+- `create_graphology_prompt() -> str`: Builds and returns the full structured prompt that's used for instructing Gemini about how to analyse handwriting. This function is the brain of InkSlate. It encodes the graphology rules to follow, the output constraints, and the required JSON schema. This is the function to modify if you need to add or delete any personality fields, change the wording that's printed in the report, tighten the output constraints, or experiment with different graphology heuristics. This function makes Gemini do the following things:
+	- Evaluate specific handwriting parameters (slant, pressure, spacing, margins, baseline, letter forms, speed).
 	- Map these visual cues to defined personality traits.
 	- Return only valid JSON with a fixed set of keys, so that downstream parsing is reliable.
 - `analyse_personality(image_path, model, save_results=True) -> Dict`: Runs the handwriting analysis on a single image.
@@ -105,7 +110,7 @@ Some of these functions aren't called; they're there for extended use cases.
 ### Optional functions
 
 - `create_comparison_report(file1, file2)`: Compares two JSON analysis files and highlights any changes in the defined traits. Useful for longitudinal tracking, and the trigger for creating InkSlate.
-- `discover_analysis_capabilities(model)` : Asks Gemini what handwriting traits it is able to assess, and saves them in `model_capabilities_YYYYMMDD_HHMMSS.json`. Useful for creating the heuristic prompt.
+- `discover_analysis_capabilities(model)` : Asks Gemini which handwriting traits it is able to assess, and saves them in `model_capabilities_YYYYMMDD_HHMMSS.json`. Useful for creating the heuristic prompt.
 - `batch_analyse(image_paths: list, model, output_dir="personality_reports")`: Processes multiple handwriting images and saves the reports in a folder. Useful for...well, not thought this out fully yet.
 
 ## Output

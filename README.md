@@ -4,7 +4,7 @@ Your handwriting tells a story. Come, listen to it.
 
 ---
 
-![inkslate.png](images/inkslate.png)
+![inkslate_user.png](images/inkslate_user.png)
 
 ---
 
