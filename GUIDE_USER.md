@@ -61,7 +61,7 @@ It looks at an image of your handwriting and creates a personality profile for f
 1. Run InkSlate by returning to the command prompt and typing the following command: `python inkslate.py`. When prompted, enter the full path to the image file you created in a previous step. It might take a while for the analysis to be done, after which the result is displayed on the terminal. A time-stamped result file (in `.json` format) is saved in the same folder as the image file.
 
 <div class="figure">
-  <img src="{{ '/images/inkslate_user.png' | relative_url }}" class="center-image" style="width:60%;">
+  <img src="{{ '/images/inkslate_user.png' | relative_url }}" class="center-image" style="width:50%;">
   <div>&nbsp;</div>
 </div>
 
