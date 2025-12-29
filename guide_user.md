@@ -89,7 +89,7 @@ Changes in handwriting can sometimes reflect changes in fine motor control, fati
 - Unexplained fatigue
 
 > **Remember:**
->You are the expert on your own body. InkSlate can only highlight some patterns, and that too with artificial Gemini intelligence (and we all know what kind of a trickster Gemini is in real mythology). It is you who knows best when something feels different enough to investigate further.
+>You are the expert on your own body. InkSlate can only highlight some patterns, and that too with artificial Gemini intelligence (and we all know what kind of a trickster Gemini's owner, Mercury, is in real mythology). It is you who knows best when something feels different enough to investigate further.
 
 To compare two pieces of writing programmatically:
 
