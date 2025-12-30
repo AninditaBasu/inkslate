@@ -1,0 +1,11 @@
+title: InkSlate
+author: Anindita Basu
+
+github:
+  repository_url: https://github.com/AninditaBasu/inkslate
+
+remote_theme: AninditaBasu/parchment-docs
+plugins:
+  - jekyll-remote-theme
+parchment:
+  preset: light
