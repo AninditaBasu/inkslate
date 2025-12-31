@@ -114,7 +114,7 @@ How to get a GoogleAI API key
   Your browser does not support the video tag.
 </video>
 
-1. Go to https://aistudio.google.com/app/apikey
+1. Go to https://aistudio.google.com/app/apikey.
 2. Click **Create API key**.
 3. Specify a name that's easy for you to remember the key by.
 4. Click the **Choose an imported project** field, and click **Create project**.
