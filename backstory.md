@@ -8,7 +8,7 @@ language: "en"
 last_updated: "2025-12-28"
 ---
 
-# InkSlate, the backstory
+# 🪶 Backstory
 
 I started speaking when I was 9 months old, they say, and started writing when I was around 3 years old, I remember. Very soon, thereafter, I discovered books! I realised I could enter different worlds, at will, and spend hours wandering inside those worlds. I devoured books, and I remembered most of what I read. Thus it's come to pass that I vividly remember (together with the illustrations that accompanied it) a story I read in one of the old books that my father had read as a child. Allow me to recap the story here.
 

@@ -35,7 +35,7 @@ limitations:
 last_updated: "2025-12-28"
 ---
 
-# InkSlate Developer Guide
+# ⚙️ InkSlate Developer Guide
 
 ---
 

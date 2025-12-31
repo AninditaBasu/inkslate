@@ -31,7 +31,7 @@ features:
 last_updated: "2025-12-28"
 ---
 
-# InkSlate User Guide
+# 📖 InkSlate User Guide
 
 ---
 
@@ -50,7 +50,7 @@ It looks at an image of your handwriting and creates a personality profile for f
 
 - A computer with Python 3.9 or later.
 - A clear photo of your handwriting.
-- A Gemini API key from Google. Get your free key from [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey).
+- A Gemini API key from Google. Get your free key from [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey). (See [helper video](#video)].)
 
 ## Steps
 
@@ -102,4 +102,17 @@ To compare two pieces of writing programmatically:
 ## Disclaimer
 
 This program is for entertainment only. It does not diagnose any personality or health conditions.
+
+---
+
+## Video
+
+How to get a GoogleAI API key
+
+<video width="640" height="360" controls>
+  <source src="images/create_googleAI_key.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 
